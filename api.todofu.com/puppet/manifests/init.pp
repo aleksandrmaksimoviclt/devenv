@@ -1,4 +1,4 @@
-node 'api.todofu.com' {
+node default {
     class { 'aptupdate': stage => 'aptupdate' }
     class { 'python': stage => 'python' }
     class { 'nginx': }
