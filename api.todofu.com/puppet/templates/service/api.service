@@ -7,7 +7,7 @@ RequiresMountsFor=/vagrant
 User=vagrant
 Restart=on-abort
 WorkingDirectory=/vagrant/api
-ExecStart=/home/vagrant/.virtualenvs/api/bin/gunicorn --reload --bind 0.0.0.0:8001 app.wsgi:application
+ExecStart=/home/vagrant/.virtualenvs/api/bin/gunicorn --reload --bind 0.0.0.0:8001 api.wsgi:application
 Type=simple
 
 [Install]
