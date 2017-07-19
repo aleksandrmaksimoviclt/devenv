@@ -7,8 +7,6 @@ sudo locale-gen en_US en_US.UTF-8
 sudo echo "LANG=\"en_US.UTF-8\"\n
 LC_ALL=\"en_US.UTF-8\"" > /etc/default/locale
 
-sudo dpkg-reconfigure locales 
-
 export DEBIAN_FRONTEND=noninteractive
 
 echo ' - updating'
