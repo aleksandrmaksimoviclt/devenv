@@ -7,7 +7,7 @@ class nginx {
         ensure  => link,
         target  => "/vagrant/puppet/templates/conf.d/nginx.conf.erb",
         notify  => Service["nginx"],
-        require => Package["nginx"],
+        require => Package["nginx"]
     }
 
     file { "/etc/nginx/sites-enabled/api":
@@ -15,6 +15,13 @@ class nginx {
         target  => "/vagrant/puppet/templates/conf.d/api.conf.erb",
         notify  => Service["nginx"],
         require => Package["nginx"]
+    }
+
+    file { 'default-nginx-disable':
+        ensure  => absent,
+        path    => '/etc/nginx/sites-enabled/default',
+        notify  => Service['nginx'],
+        require => Package['nginx']
     }
 
     service { "nginx":
