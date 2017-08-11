@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
         api.vm.provision "shell", inline: "sudo apt-get -y install puppet"
 
-        api.vm.synced_folder "../../api", "/vagrant/api"
+        api.vm.synced_folder "../../api-todofu", "/vagrant/api"
 
         api.vm.provision :puppet do |puppet|
             puppet.manifests_path = "puppet"
