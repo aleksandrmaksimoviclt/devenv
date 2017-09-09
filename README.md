@@ -8,8 +8,9 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 chsh -s `which zsh`
 ```
 
-Install node.js with npm: 
+Install node.js with npm (and curl if not installed): 
 ```
+sudo apt install curl
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
