@@ -8,6 +8,14 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 chsh -s `which zsh`
 ```
 
+Install node.js with npm: 
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+
+
 ## api.todofu.com
 ### Pre-requisites
 * Vagrant (https://www.vagrantup.com/downloads.html)
