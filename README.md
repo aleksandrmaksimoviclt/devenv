@@ -26,6 +26,8 @@ sudo apt install -y virtualbox
 ```
 ### Runing api.todofu.com
 `cd` into api.todofu.com directory and execute command bellow
+
+**Important!** Make sure that code from [api-todofu repository](https://github.com/aleksandrmaksimoviclt/api-todofu) is placed  one level below`/path/to/devenv/`
 ```
 vagrant up
 ```
