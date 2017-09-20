@@ -25,6 +25,7 @@ sudo apt-get install -y nodejs
 sudo apt install -y virtualbox
 ```
 ### Runing api.todofu.com
+`cd` into api.todofu.com directory and execute command bellow
 ```
 vagrant up
 ```
