@@ -1,0 +1,14 @@
+[Unit]
+Description=Api service
+After=network.target
+RequiresMountsFor=/vagrant
+
+[Service]
+User=vagrant
+Restart=on-abort
+WorkingDirectory=/vagrant/api
+ExecStart=/home/vagrant/.virtualenvs/api/bin/gunicorn --reload --bind 0.0.0.0:8001 api.wsgi:application
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
