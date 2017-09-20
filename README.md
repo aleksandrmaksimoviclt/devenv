@@ -25,9 +25,23 @@ sudo apt-get install -y nodejs
 sudo apt install -y virtualbox
 ```
 ### Runing api.todofu.com
-`cd` into api.todofu.com directory and execute command bellow
 
 **Important!** Make sure that code from [api-todofu repository](https://github.com/aleksandrmaksimoviclt/api-todofu) is placed  one level below`/path/to/devenv/`
+
+`cd` into  `/path/to/devenv/api.todofu.com/` directory and execute command bellow
+
 ```
 vagrant up
+```
+
+If it is first time we are running `vagrant up` then we will need to `makemigrations` and `collectstatic` in DJANGO:
+
+```
+vagrant up
+cd /vagrant/api
+workon api
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic
+exit
 ```
