@@ -21,12 +21,14 @@ sudo apt-get install -y nodejs
 ### Pre-requisites
 * Vagrant (https://www.vagrantup.com/downloads.html)
 * Virtual box
+* Vagrant plugin "Vb-guest" (Optional)
 ```
 sudo apt install -y virtualbox
+sudo vagrant plugin install vagrant-vbguest 
 ```
 ### Runing api.todofu.com
 
-**Important!** Make sure that code from [api-todofu repository](https://github.com/aleksandrmaksimoviclt/api-todofu) is placed  one level below`/path/to/devenv/`
+**Important!** Make sure that code from [api-todofu repository](https://github.com/aleksandrmaksimoviclt/api-todofu) is placed one level below`/path/to/devenv/`
 
 `cd` into  `/path/to/devenv/api.todofu.com/` directory and execute command bellow
 
